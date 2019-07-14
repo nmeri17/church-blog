@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset=utf-8>
+	
+	<link href='settings.css' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link type="x-image/icon" rel="icon" href="../../favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<title> Account Settings </title>
+</head>
+
+<body>
+
+	{{header}}
+
+	<main>
+	<section>
+		<h1> Account Settings</h1>
+
+			<div id=profilePic> <br>
+				<img src='{{profile_pic}}' alt="">
+			</div>
+
+			<br><br>
+
+		<form enctype='multipart/form-data' action='' method='POST'>
+			<input type='file' name=profile_pic value="change picture"/>
+
+			<br> <br>
+
+			<label for=bio>Bio: </label> <br> <textarea name='bio' id='bio' placeholder="Write something about yourself" maxlength='210'> {{bio}} </textarea>
+			<br>
+			<span id='count' style="color: #337ab7"></span> </br><br>
+			
+			<label for=email>Your Email: </label> <div id=email-setting>
+			<span id=current> {{email}} </span> <span> <a href='javascript:void(0)' onclick='cE();' >Change current email  </a> </span> <br>
+			<input type=email name=email id=email placeholder="New email"/> <input type=password name=pass placeholder="Account Password" /></div>
+			
+			<br>
+			<label for=pwd>Change Password: </label> <div id=pwd>
+			<input type=password name=old_pass  placeholder="Old Password"/> <input type=password name=new_pass  placeholder="New Password"/> <br>
+			</div>
+			
+			<input type=submit value="Save Changes" /> <span id=indicator> </span>
+			<script>
+			var max = parseInt($("textarea").attr("maxlength")), len = $("textarea").val().length, currLen = max - len-1, pic = $('input[type="file"]')[0];
+			
+			$(document).ready(function() {
+			$('#count').html(currLen);
+			});
+			
+			$("textarea").on('input', function(){
+			var max = parseInt($("textarea").attr("maxlength")), len = $("textarea").val().length, currLen = max - len;
+			$("#count").html(currLen);
+			});
+			
+			function cE (){
+			$("#email-setting").css('height', "auto");
+			}
+			
+			$('section form').on('submit',function(e){
+			var max = 2048000, err = 'Changes not saved. ';
+			if (pic.files[0].type != 'image/jpeg') {
+			e.preventDefault();
+			$('#indicator').text(err + "Content type must be image");
+			}
+			else if (pic.files[0].size > max) {
+			e.preventDefault();
+			$('#indicator').text(err + "Image size is above " + max/1024000 + "mb");
+			}
+			});
+			</script>
+			</form>
+			
+	</section>
+	
+	</main>
+		{{footer}}
+
+</body>
+</html>

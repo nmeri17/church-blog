@@ -1,0 +1,18 @@
+<h2>make new post</h2>
+		<form action='' method=POST enctype="multipart/form-data" id=article-form>
+			<label for=article-title>Article Title: </label> <br> <input type=text name=article_title id=article-title /> <br> <br>
+			<label for=banner-image>Post Banner Image: </label> <br> <input type=file name=banner_image id=banner-image/> <br> <br>
+			<label for=article-body>Article Body: </label> <div class=format> <span class=paragraph> <i class="fa fa-paragraph"></i> </span> <span class=underline> <i class="fa fa-underline"></i> </span> <span class=verse> <i class="fa fa-italic"></i> </span> <span class=quote> <i class="fa fa-bold"></i></span></div> <br>
+			<textarea name=article_body cols=80 rows=20 placeholder="Awesome post goes here..." id=article-body></textarea> <br> <br>
+			<label for=categories>Categories: </label> <br> <input type=text name=categories id=categories title="Delimit each category with a comma" placeholder="E.g. Love, Romance, Self-improvement" /> <br> <br> <br>
+			<input type=submit value="Publish Post"/>
+		</form>
+		<script src='/blog/using_mod_rewrite/users/view/wysiwyg.js' > </script>
+
+		<form action="" method="POST">
+			<label for=testimony>New testimony: </label> <textarea name=testimony id=testimony ></textarea> <br>
+			<input type=hidden name=author /> 
+			<input type=submit name=submit value="submit" /> <br>
+		</form>
+
+		<!-- Remember to add a small script that prevents topics from being less than 6 words and also check if topic preexists -->

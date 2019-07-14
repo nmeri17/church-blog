@@ -1,0 +1,20 @@
+[04-Apr-2016 23:29:23 Africa/Lagos] PHP Warning:  include(/header.php): failed to open stream: No such file or directory in /home/agwconit/public_html/blog/about/index.php on line 21
+[04-Apr-2016 23:29:23 Africa/Lagos] PHP Warning:  include(): Failed opening '/header.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/agwconit/public_html/blog/about/index.php on line 21
+[04-Apr-2016 23:29:23 Africa/Lagos] PHP Warning:  include(/footer.php): failed to open stream: No such file or directory in /home/agwconit/public_html/blog/about/index.php on line 41
+[04-Apr-2016 23:29:23 Africa/Lagos] PHP Warning:  include(): Failed opening '/footer.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/agwconit/public_html/blog/about/index.php on line 41
+[06-Apr-2016 09:06:32 Africa/Lagos] PHP Warning:  include(/header.php): failed to open stream: No such file or directory in /home/agwconit/public_html/blog/about/index.php on line 21
+[06-Apr-2016 09:06:32 Africa/Lagos] PHP Warning:  include(): Failed opening '/header.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/agwconit/public_html/blog/about/index.php on line 21
+[06-Apr-2016 09:06:32 Africa/Lagos] PHP Warning:  include(/footer.php): failed to open stream: No such file or directory in /home/agwconit/public_html/blog/about/index.php on line 41
+[06-Apr-2016 09:06:32 Africa/Lagos] PHP Warning:  include(): Failed opening '/footer.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/agwconit/public_html/blog/about/index.php on line 41
+[24-Apr-2016 12:12:26 Africa/Lagos] PHP Parse error:  syntax error, unexpected end of file in /home/agwconit/public_html/blog/universal_user.php on line 6
+[24-Apr-2016 12:13:52 Africa/Lagos] PHP Parse error:  syntax error, unexpected end of file in /home/agwconit/public_html/blog/universal_user.php on line 6
+[24-Apr-2016 12:15:46 Africa/Lagos] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /home/agwconit/public_html/blog/footer.php on line 17
+[24-Apr-2016 13:04:29 Africa/Lagos] PHP Parse error:  syntax error, unexpected end of file in /home/agwconit/public_html/blog/universal_user.php on line 6
+[24-Apr-2016 13:06:22 Africa/Lagos] PHP Warning:  Unterminated comment starting line 2 in /home/agwconit/public_html/blog/universal_user.php on line 2
+[24-Apr-2016 13:06:22 Africa/Lagos] PHP Notice:  Undefined variable: deets in /home/agwconit/public_html/blog/header.php on line 50
+[24-Apr-2016 13:06:23 Africa/Lagos] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /home/agwconit/public_html/blog/footer.php on line 17
+[24-Apr-2016 13:07:52 Africa/Lagos] PHP Notice:  Undefined variable: deets in /home/agwconit/public_html/blog/header.php on line 50
+[24-Apr-2016 13:07:52 Africa/Lagos] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /home/agwconit/public_html/blog/footer.php on line 17
+[24-Apr-2016 13:11:54 Africa/Lagos] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /home/agwconit/public_html/blog/footer.php on line 17
+[24-Apr-2016 13:15:00 Africa/Lagos] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /home/agwconit/public_html/blog/footer.php on line 15
+[24-Apr-2016 13:19:33 Africa/Lagos] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /home/agwconit/public_html/blog/footer.php on line 5

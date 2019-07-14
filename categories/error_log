@@ -1,0 +1,4 @@
+[18-Apr-2016 13:46:57 Africa/Lagos] PHP Parse error:  syntax error, unexpected end of file in /home/agwconit/public_html/blog/categories/index.php on line 75
+[18-Apr-2016 13:55:20 Africa/Lagos] PHP Notice:  Undefined index: cat in /home/agwconit/public_html/blog/categories/index.php on line 29
+[24-Apr-2016 12:14:07 Africa/Lagos] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /home/agwconit/public_html/blog/footer.php on line 17
+[26-Apr-2016 13:53:38 Africa/Lagos] PHP Notice:  Undefined index: pagename in /home/agwconit/public_html/blog/header.php on line 50

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+
+	<link href='{{required_css}}' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link type="x-image/icon" rel="icon" href="../../favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script async src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="/jquery.js"></script>
+
+	<title> {{title}} </title>
+</head>
+
+<body>
+	{{header}}
+	
+	<main>
+
+		<aside>
+	
+			<h2> {{name}} </h2>
+			<div id='profilePic'> <br>
+				<img src='{{profile_pic}}' alt="">
+			</div>
+	
+			<div id=bio>
+				{{bio}}
+			</div>
+	
+			<div id=misc>
+				{{my_menu}}
+		
+				{{guest_menu}}
+
+				{{admin_menu}}
+			</div>
+
+		</aside>
+
+		<section>
+			{{new_blog_post}}
+
+			{{admin_markup}}
+		</section>
+
+	</main>
+	
+		{{footer}}
+
+</body>
+</html>

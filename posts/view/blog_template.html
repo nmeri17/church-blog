@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta charset=utf-8>
+
+	<link href='http://blog.agwconitsha.org/posts/index.css' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<title> {{article_title}} </title>
+</head>
+
+<body>
+	{{header}}
+
+	<aside>
+		<span><a href="{{next}}" title=next> <i class="fa fa-arrow-right fa-5x"></i></a></span>
+		<span><a href="{{prev}}" title=prev> <i class="fa fa-arrow-left fa-5x"></i></a></span>
+	</aside>
+
+	<!---==== MAIN POST BODY STARTS HERE =========-->
+	<main>
+
+	<!-- POST HEADER -->
+		<h2> {{article_title}} </h2>
+		<div id=banner-image> <img src='{{banner_image}}' alt=""> </div>
+		<div id=info> by<span id=author> {{article_author}} </span> <span id=date> {{article_date}} </span> </div>
+		
+		<!-- POST CONTENT -->
+		<section>
+		 <!-- ADMIN DELETE AND EDIT BUTTONS -->
+			{{admin_controls}}
+		</section>
+	</main>
+
+		<!-- CATEGORIES, SHARE BUTTONS -->
+		<div id=categories>Categorized under: 
+			{{categories}}
+		</div>
+		<div id=share> <a href=#><i class="fa fa-facebook"></i> Facebook </a> <a href=#><i class="fa fa-twitter"></i> Twitter </a> </div>
+		
+		<!-- COMMENT BOX -->
+		<div id=new-comment>
+			{{new_comment}}
+		</div>
+		<!-- END OF COMMENTS BOX. DISPLAY ALL COMMENTS -->
+		
+		<section id=comments>
+			<h3> {{comments_count}} </h3> <hr>
+			
+			{{each_comment}}
+		</section>
+
+		{{footer}}
+</body>
+</html>

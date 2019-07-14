@@ -1,0 +1,207 @@
+	<div id=0>
+	
+		<form action="" method='POST' enctype="multipart/form-data" id=article-form>
+			<label for=article-title>Article Title: </label> <input type=text name=article_title id=article-title required /> <br> <br>
+
+			<label for=article-author>Article Author: </label> <input type=hidden name=article_author id=article-author/> <br> <br>
+
+			<label for=banner-image>Post Banner Image: </label> <input type=file name=banner_image id=banner-image  required/> <br> <br>
+
+			<label for=article-body>Article Body: </label> <div class=format> <span class=paragraph> <i class="fa fa-paragraph"></i> </span> <span class=underline> <i class="fa fa-underline"></i> </span> <span class=verse> <i class="fa fa-italic"></i> </span> <span class=quote> <i class="fa fa-bold"></i></span></div> <br>
+
+			<textarea name=article_body cols=80 rows=30 placeholder="Awesome post goes here..." id=article-body required></textarea> <br> <br>
+
+			<label for=categories>Categories: </label> <input type=text name=categories id=categories title="Delimit each category with a comma" placeholder="E.g. Love, Romance, Self-improvement" pattern="/[a-zA-z_,:]+|[^\w]|\d/" /> <br> <br>
+
+			<input type=submit value="Publish Post"/>
+		</form>
+		<script src=../register/wysiwyg.js> </script>
+		<br> <br>
+
+		<h1> Sidebar </h1>
+		<br>
+		<form action="" method='POST' enctype="multipart/form-data">
+			<label for=announcements>Church announcements: </label> <input type=text name=announcements id=announcements /> <br> <br>
+			<label for=book>Book of the Month: </label> <input type=text name=book_of_the_month id=book /> <br> <br>
+			<label for=book-image>Book Image: </label> <input type=file name=book_image id=book-image/> <br> <br>
+			<input type=submit value="Update Sidebar"/>
+		</form>
+	</div>
+	
+	<div id=1>
+	<form action="" method='POST' id=sermons-form>
+		<label for=sermon-title>Sermon Title: </label> <input type=text name=sermon_title id=sermon-title required /> <br> <br>
+
+		<label for=preacher>Preacher: </label> <input type=text name=categories id=preacher /> <br> <br>
+		<label for=sermon-body>Sermon Body: </label> <div class=format> <span class=paragraph> <i class="fa fa-paragraph"></i> </span> <span class=underline> <i class="fa fa-underline"></i> </span> <span class=verse> <i class="fa fa-italic"></i> </span> <span class=quote> <i class="fa fa-bold"></i></span></div> <br>
+		<textarea name=sermon_body cols=80 rows=30 placeholder="Uplifting sermon goes here..." id=sermon-body></textarea> <br> <br>
+		<input type=submit value="Make new sermon"/> <br> <br>
+	</form>
+
+	<form action="" method='POST' id=delete-sermon>
+		<label for=sermon-name>Sermon Title: </label> <input type=text name=delete_sermon id=sermon-name placeholder="Enter sermon name" /> <br> <br>
+		<input type=submit value="Delete sermon"/>
+	</form>
+	<script>
+	var submit = document.querySelectorAll("input")[1];
+	submit.addEventListener("click", function(e){
+	submit.preventDefault();
+	switch(prompt("Are you sure you want to delete " + e.target.parentNode[0].innerHTML + " ?", "")) {
+		case "yes": submit.parentNode.submit; break;
+		case "no": alert("Sermnon was not deleted"); e.target.parentNode[0].innerHTML = ""; break;
+		default: alert("Type in 'yes' to delete"); e.target.parentNode[0].innerHTML = "";
+	};
+	});
+	</script>
+	</div>
+	
+	<div id=2>
+		<form action="" method='POST' enctype="multipart/form-data" id=home-form>
+			<label for=image> Image</label> <input type=file name=banner_image id=image /> <br> 
+			<label for=replace> Replace image number:</label> <input type=number name=number id=replace maxlength=1 max=5 min=1 /> <br> <br>
+			<input type=submit value="Swap landing page images"/>
+		</form>
+		<script>
+		var input = document.querySelectorAll("input")[0];
+		input.addEventListener("change", function(){
+		if (input.files[0].size > 350) {
+		alert("This file size exceeds 350px and will slow down page load time");
+		location.reload();
+		}
+		});
+		</script>
+	</div>
+	
+	<div id=3>
+	
+	<div role=main id=guest-posts>
+	
+		<form action='' method='POST'>
+		<select name=dropdown size=2>
+			<option value=oldest>Oldest </option>
+			<option value=all>Show All </option>
+			<option value=newest>Newest </option>
+		</select> <br> <br>
+		<input type=submit value='sort by'>
+		</form> <br> <br>
+
+		<div class=new-post>
+			<div class=image-holder> <img src='banner2.jpg' alt=''> </div>
+			<div class='text-holder'>	
+				<p class=article-title> Then Go Even Deeper And Narrower </p>
+				<p class='articleBody'>
+				
+				A young Eritrean man in his early twenties has two nephews and one niece but is particularly fond of the niece; partly because they both share similar traits
+				and temperaments. During each visit to her parents' home, they spend the most time together, with her clinging unto him. Her pudgy arms raised
+				in the air, beckoning to her uncle, she says 'Carry me. Carry me.' in a voice unusually deep for a three year old girl. And he obliges by lifting her aloft into what can be considered her nirvana.
+				</p>
+			</div>
+			<div class=more> More &#187;</div>
+			<!-- USE LIGHTBOX TO DISPLAY MORE -->
+			<div class=push> <a href=#> push </a></div>
+		</div>
+		
+		<div class=new-post>
+			<div class=image-holder> <img src='banner1.jpg' alt=''> </div>
+			<div class='text-holder'>	
+				<p class=article-title> Then Go Even Deeper And Narrower </p>
+				<p class='articleBody'>
+				
+				A young Eritrean man in his early twenties has two nephews and one niece but is particularly fond of the niece; partly because they both share similar traits
+				and temperaments. During each visit to her parents' home, they spend the most time together, with her clinging unto him. Her pudgy arms raised
+				in the air, beckoning to her uncle, she says 'Carry me. Carry me.' in a voice unusually deep for a three year old girl. And he obliges by lifting her aloft into what can be considered her nirvana.
+				</p>
+			</div>
+			<div class=more> More &#187;</div>
+			<!-- USE LIGHTBOX TO DISPLAY MORE -->
+			<div class=push> <a href=#> push </a> </div>
+		</div>
+		<div class=new-post>
+			<div class=image-holder> <img src='banner2.jpg' alt=''> </div>
+			<div class='text-holder'>	
+				<p class=article-title> Then Go Even Deeper And Narrower </p>
+				<p class='articleBody'>
+				
+				A young Eritrean man in his early twenties has two nephews and one niece but is particularly fond of the niece; partly because they both share similar traits
+				and temperaments. During each visit to her parents' home, they spend the most time together, with her clinging unto him. Her pudgy arms raised
+				in the air, beckoning to her uncle, she says 'Carry me. Carry me.' in a voice unusually deep for a three year old girl. And he obliges by lifting her aloft into what can be considered her nirvana.
+				</p>
+			</div>
+			<div class=more> More &#187;</div>
+			<!-- USE LIGHTBOX TO DISPLAY MORE -->
+			<div class=push> <a href=#> push </a></div>
+		</div>
+
+		<!-- USER ARTICLES GO HERE -->
+		{{inbox}}
+
+	</div>
+	<hr id=underground> <br> <br>
+				<script>
+				var body = $('.articleBody');
+				for (var i = 0; i < body.length; i++) {
+				body[i].innerHTML = body[i].innerHTML.substr(0, 300) + '...';
+				}
+				
+				$(".push a").click(function(e) {
+					e.preventDefault();
+					var that = $(this);
+					$.post("push.php", {push: that.attr('href')}, function (data) {
+						if (data = "Front page updated!") {
+							$(that).parents(".new-post").hide("bounce", {times: 25}, 4500);
+						}
+					});
+				});
+				</script>
+
+	<div id=testimonies>
+				<h2> Testimonies </h2>
+				<p>
+				<a href=#> Raheem Sadiq </a> said "The patient opened his eyes, and then squinted at its intruding brightness. He felt sedated but mildly alarmed at his new environment. He busied his mind with the unsuccessful task of attempting to recall what events preceded his current admission at the hospital."
+				</p>
+
+	</div>
+	</div>
+
+	<script>
+	$(document).ready(function() {
+	
+	var section = document.querySelector("section");
+	var firstChild = section.querySelectorAll("div")[0];
+	var buttonDiv = document.createElement("DIV");
+	buttonDiv.setAttribute("ID", "buttonDiv");
+	var insertedDiv = section.insertBefore(buttonDiv, firstChild);
+	var line = document.createElement("hr");
+	section.insertBefore(line, firstChild);
+	
+	var mainDivs = $("section > div:not([id='buttonDiv'])");
+	Array.prototype.forEach.call(mainDivs, function(b){ 
+	var newDiv = document.createElement("DIV");
+	newDiv.dataset.buttonName = b.getAttribute("ID");
+	insertedDiv.appendChild(newDiv);
+	});
+	
+	$(line).css('flex', '0 25%');
+	$(line).css('margin-top', '-73%');
+	
+	Array.prototype.forEach.call(insertedDiv.querySelectorAll("div"), function(b){
+	$(mainDivs[0]).addClass("active");
+	b.addEventListener("click", function(e){
+	var i = parseInt(e.target.dataset.buttonName, 10); // getting the equivalent integer of current pressed
+	if (mainDivs[i].className !== "active") { //if clicked has no class active, remove active from anyone else that has it and add to clicked
+		for (var j = 0; j < mainDivs.length; j++) {
+		$(mainDivs[j]).removeClass("active");
+		}
+		$(mainDivs[i]).addClass("active");
+		$(line).css("transform", 'translatex(' + (e.target.getBoundingClientRect().left - 320) + 'px)');
+	}	
+	});
+	});	
+	var eachButton = document.querySelector("#buttonDiv").querySelectorAll("div");
+	eachButton[0].innerHTML = "Blog";
+	eachButton[1].innerHTML = "Sermons";
+	eachButton[2].innerHTML = "Home";
+	eachButton[3].innerHTML = "Inbox";
+	});
+	
+	</script>
